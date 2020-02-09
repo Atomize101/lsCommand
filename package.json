@@ -1,0 +1,23 @@
+{
+  "name": "lsCommand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atomize101/lsCommand.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "ls": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Atomize101/lsCommand/issues"
+  },
+  "homepage": "https://github.com/Atomize101/lsCommand#readme"
+}
