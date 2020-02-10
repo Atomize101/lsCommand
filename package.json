@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Atomize101/lsCommand/issues"
   },
-  "homepage": "https://github.com/Atomize101/lsCommand#readme"
+  "homepage": "https://github.com/Atomize101/lsCommand#readme",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  }
 }
