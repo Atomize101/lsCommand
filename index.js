@@ -2,19 +2,21 @@
 
 const fs = require('fs');
 const chalk = require('chalk');
+const path = require('path');
 // const util = require('util');
 
 // Method 1
 
 //const lstat = util.promisify(fs.lstat);
+const targetDir = process.argv[2] || process.cwd();
 
-fs.readdir(process.cwd(), async (err, filenames) => {
+fs.readdir(targetDir, async (err, filenames) => {
     if(err) {
         console.log(err);
     }
 
     const statPromises = filenames.map(filename => {
-        return lstat(filename);
+        return lstat(path.join(targetDir, filename));
     });
 
     const allStats = await Promise.all(statPromises);
@@ -25,7 +27,7 @@ fs.readdir(process.cwd(), async (err, filenames) => {
         if(stats.isFile()) {
             console.log(filenames[index])
         } else {
-            console.log(chalk.green(filenames[index]));
+            console.log(chalk.blue(filenames[index]));
         }
     }
 });

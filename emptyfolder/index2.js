@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
+//const fs = require('fs');
 // const util = require('util');
 
 // Method 1
 
-const lstat = util.promisify(fs.lstat);
+//const lstat = util.promisify(fs.lstat);
 
 fs.readdir(process.cwd(), async (err, filenames) => {
     if(err) {
